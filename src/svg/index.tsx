@@ -1,11 +1,4 @@
-type SVGProps = {
-  className?: string;
-  fill?: string;
-  width?: string | number;
-  height?: string | number;
-};
-
-export const HeaderSearchIcon = (props: SVGProps) => {
+export const HeaderSearchIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +7,7 @@ export const HeaderSearchIcon = (props: SVGProps) => {
       strokeWidth={1.5}
       stroke="currentColor"
       className="h-6 w-6"
+      {...props}
     >
       <path
         strokeLinecap="round"
@@ -24,7 +18,7 @@ export const HeaderSearchIcon = (props: SVGProps) => {
   );
 };
 
-export const HeaderBellIcon = (props: SVGProps) => {
+export const HeaderBellIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +27,7 @@ export const HeaderBellIcon = (props: SVGProps) => {
       strokeWidth={1.5}
       stroke="currentColor"
       className="h-6 w-6"
+      {...props}
     >
       <path
         strokeLinecap="round"
@@ -43,13 +38,14 @@ export const HeaderBellIcon = (props: SVGProps) => {
   );
 };
 
-export const PlayIcon = (props: SVGProps) => {
+export const PlayIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
       className="h-6 w-6"
+      {...props}
     >
       <path
         fillRule="evenodd"
@@ -60,15 +56,16 @@ export const PlayIcon = (props: SVGProps) => {
   );
 };
 
-export const InfoIcon = (props: SVGProps) => {
+export const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={2}
+      strokeWidth={1.5}
       stroke="currentColor"
       className="h-6 w-6"
+      {...props}
     >
       <path
         strokeLinecap="round"
@@ -79,7 +76,7 @@ export const InfoIcon = (props: SVGProps) => {
   );
 };
 
-export const ChevronRight = (props: SVGProps) => {
+export const ChevronRightIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -88,6 +85,7 @@ export const ChevronRight = (props: SVGProps) => {
       strokeWidth={2}
       stroke="currentColor"
       className={props.className}
+      {...props}
     >
       <path
         strokeLinecap="round"
@@ -98,7 +96,7 @@ export const ChevronRight = (props: SVGProps) => {
   );
 };
 
-export const ChevronLeft = (props: SVGProps) => {
+export const ChevronLeftIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -107,11 +105,92 @@ export const ChevronLeft = (props: SVGProps) => {
       strokeWidth={2}
       stroke="currentColor"
       className={props.className}
+      {...props}
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M15.75 19.5L8.25 12l7.5-7.5"
+      />
+    </svg>
+  );
+};
+
+export const CaretDownIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  );
+};
+
+export const EditIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+      />
+    </svg>
+  );
+};
+
+export const UserIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+      />
+    </svg>
+  );
+};
+
+export const HelpIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
       />
     </svg>
   );
