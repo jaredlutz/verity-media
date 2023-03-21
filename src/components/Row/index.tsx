@@ -49,7 +49,7 @@ const Row = ({ title, items }: RowProps) => {
           <ChevronLeftIcon className="h-12 w-12" />
         </button>
         <div
-          className="flex w-full items-center gap-4 overflow-x-hidden py-4 pl-4 scrollbar-hide sm:pl-8 lg:pl-12"
+          className="flex w-full items-center gap-2 overflow-x-hidden py-4 pl-4 scrollbar-hide sm:pl-8 lg:pl-12"
           ref={rowRef}
         >
           {items.map((item) => (

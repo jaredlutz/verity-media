@@ -22,7 +22,19 @@
   }
 
   .input {
-    @apply w-full rounded border-none bg-[#333] p-4 placeholder-gray-500 outline-none transition duration-200 focus:bg-[#454545];
+    @apply w-full rounded border-none p-4 outline-none transition duration-200;
+  }
+
+  .input-error {
+    @apply ring-1 ring-orange-500;
+  }
+
+  .input-light {
+    @apply bg-white text-gray-800 placeholder-gray-400 focus:bg-gray-200;
+  }
+
+  .input-dark {
+    @apply bg-[#333] placeholder-gray-500 focus:bg-[#454545];
   }
 }
 

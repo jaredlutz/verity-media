@@ -1,8 +1,8 @@
 "use client";
 
-import { baseUrl } from "@/constants/movie";
 import { InfoIcon, PlayIcon } from "@/svg";
 import { IMovie } from "@/types";
+import { baseUrl } from "@/utils/constants/movie";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 

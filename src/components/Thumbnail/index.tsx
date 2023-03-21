@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { thumbnailUrl } from "@/constants/movie";
 import { IMovie } from "@/types";
+import { thumbnailUrl } from "@/utils/constants/movie";
 
 type ThumbnailProps = {
   item: IMovie;

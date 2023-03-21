@@ -1,43 +1,50 @@
-import { Header, Hero, Row } from "@/components";
-import requests from "@/utils/requests";
+"use client";
+import { FAQ, Footer, Header } from "@/components";
+import Features from "@/components/Features";
+import { Input } from "@/components/Form";
+import { ChevronRightIcon } from "@/svg";
+import Image from "next/image";
 
-import { IMovieAPIResponse } from "@/types";
-
-// type DataResponseType = {
-//   trendingNow: IMovieAPIResponse;
-//   popularMovies: IMovieAPIResponse;
-//   discoverMovies: IMovieAPIResponse;
-//   topRatedMovies: IMovieAPIResponse;
-//   actionMovies: IMovieAPIResponse;
-// };
-
-async function getData() {
-  const res = await fetch(requests.fetchTrending);
-
-  // Recommendation: handle errors
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
-const Home = async () => {
-  const data: IMovieAPIResponse = await getData();
-
+const Home = () => {
   return (
-    <main className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511]">
+    <main className="">
       <Header />
-      <main>
-        <Hero movies={data.results} />
-        <section className="mt-8 flex flex-col gap-12">
-          <Row title="Trending Now" items={data.results} />
-          <Row title="Popular Movies" items={data.results} />
-          <Row title="Discover Movies" items={data.results} />
-          <Row title="Top Rated Movies" items={data.results} />
-        </section>
-      </main>
+      <div className="relative flex h-[80vh] w-full items-center justify-center">
+        <Image
+          src="/images/homebg.jpeg"
+          alt="background image"
+          fill={true}
+          loading="eager"
+          priority={true}
+          className="-z-10 object-cover opacity-50"
+        />
+        <div className="absolute flex flex-col items-center justify-center gap-4 text-center text-white">
+          <h1 className="max-w-lg text-5xl font-semibold">
+            Unlimited movies, TV shows and more.
+          </h1>
+          <h2 className="text-2xl">Watch anywhere. Cancel anytime.</h2>
+          <p className="text-lg">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+          <form className="flex w-full items-center">
+            {/* <input type="email" name="" id="" /> */}
+            <Input
+              placeholder="Email address"
+              colorMode="light"
+              className="rounded-tr-none rounded-br-none"
+            />
+            <button className="flex h-full flex-shrink-0 items-center gap-2 rounded-tr rounded-br bg-[#e50914] py-3.5 px-8 text-lg">
+              <span>Get Started</span>
+              <ChevronRightIcon className="h-4 w-4" strokeWidth={3} />
+            </button>
+          </form>
+        </div>
+      </div>
+      <div className="h-2 w-full bg-zinc-800"></div>
+      <Features />
+      <FAQ />
+      <Footer />
     </main>
   );
 };

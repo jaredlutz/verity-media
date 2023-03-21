@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { HeaderBellIcon, HeaderSearchIcon } from "@/svg";
+import MobileMenuDropdown from "./mobileMenuDropdown";
 import ProfileDropdown from "./profileDropdown";
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
         isScrolled && "bg-[#141414]"
       } fixed top-0 z-50 w-full px-4 py-2 text-white transition duration-500 header-gradient sm:px-8 md:py-5 lg:px-12`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+      <div className="flex items-center justify-between ">
         <div className="flex flex-shrink-0 items-center space-x-6 md:space-x-8 lg:space-x-12">
           <Link href="/">
             <Image
@@ -24,6 +25,7 @@ const Header = () => {
               alt="Netflux logo"
               height={40}
               width={100}
+              className="flex-shrink-0"
             />
           </Link>
           <ul className="hidden items-center space-x-4 md:flex lg:space-x-6">
@@ -33,6 +35,9 @@ const Header = () => {
             <li className="header-link">New & Popular</li>
             <li className="header-link">My List</li>
           </ul>
+          <div className="relative flex items-center justify-center">
+            <MobileMenuDropdown />
+          </div>
         </div>
 
         <div className="flex items-center gap-6">
