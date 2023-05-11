@@ -2,6 +2,7 @@
 import { Checkbox, Input } from "@/components/Form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -38,14 +39,16 @@ const Login = () => {
 
   return (
     <div className="relative flex h-screen w-screen flex-col md:items-center md:justify-center md:bg-transparent">
-      <Image
-        src="/images/login-bg.jpeg"
-        alt="background image"
-        className="hidden object-cover opacity-50 sm:block"
-        fill={true}
-        loading="eager"
-        priority={true}
-      />
+      <Link href="/">
+        <Image
+          src="/images/login-bg.jpeg"
+          alt="background image"
+          className="hidden object-cover opacity-50 sm:block"
+          fill={true}
+          loading="eager"
+          priority={true}
+        />
+      </Link>
       <div className="absolute top-8 left-16 cursor-pointer">
         <Image src="/logo.svg" alt="Netflix Logo" height={50} width={150} />
       </div>

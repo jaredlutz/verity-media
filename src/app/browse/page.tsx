@@ -1,4 +1,4 @@
-import { Header, Hero, Row } from "@/components";
+import { Hero, Navbar, Row } from "@/components/client";
 import requests from "@/utils/constants/requests";
 
 import { IMovieAPIResponse } from "@/types";
@@ -20,7 +20,7 @@ const Browse = async () => {
 
   return (
     <main className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511]">
-      <Header />
+      <Navbar user="user" />
       <main>
         <Hero movies={data.results} />
         <section className="mt-8 flex flex-col gap-12">

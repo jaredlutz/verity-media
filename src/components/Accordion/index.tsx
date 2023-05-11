@@ -14,7 +14,7 @@ const Accordion = ({ children }: ChildrenProp) => {
 
   return (
     <AccordionContext.Provider value={{ activeItem, setActiveItem }}>
-      <div className="flex w-full flex-col gap-2">{children}</div>
+      <div className="flex flex-col w-full gap-2">{children}</div>
     </AccordionContext.Provider>
   );
 };
@@ -24,3 +24,27 @@ Accordion.Title = Title;
 Accordion.Content = Content;
 
 export default Accordion;
+
+// :root {
+//   --foreground-rgb: 0, 0, 0;
+//   --background-start-rgb: 214, 219, 220;
+//   --background-end-rgb: 255, 255, 255;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --foreground-rgb: 255, 255, 255;
+//     --background-start-rgb: 0, 0, 0;
+//     --background-end-rgb: 0, 0, 0;
+//   }
+// }
+
+// body {
+//   color: rgb(var(--foreground-rgb));
+//   background: linear-gradient(
+//       to bottom,
+//       transparent,
+//       rgb(var(--background-end-rgb))
+//     )
+//     rgb(var(--background-start-rgb));
+// }
