@@ -7,7 +7,7 @@ export const Logo = () => {
       <Image
         src="./logo.svg"
         priority
-        alt="VMedia logo"
+        alt="netflux logo"
         height={40}
         width={100}
         className="flex-shrink-0"
